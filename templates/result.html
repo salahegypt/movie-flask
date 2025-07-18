@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فيلمك المناسب</title>
+</head>
+<body style="text-align:center; direction: rtl; font-family: sans-serif;">
+  <h2>مرحبًا {{ name }}! 👋</h2>
+  <p>نقترح عليك مشاهدة:</p>
+
+  <h3>{{ movie.title }}</h3>
+  <a href="{{ movie.url }}" target="_blank">
+    <img src="{{ movie.image }}" alt="الفيلم" style="width: 400px;">
+  </a>
+
+  <form action="/thank_you" method="POST">
+    <p>ما رأيك في هذا الفيلم؟</p>
+    <input type="text" name="opinion" required style="width: 300px;"><br><br>
+    <button type="submit">أرسل رأيك</button>
+  <a href="{{ url_for('index') }}">الرجوع للصفحة الرئيسية</a>
+  </form>
+</body>
+</html>

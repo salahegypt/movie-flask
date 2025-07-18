@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مرحبا بك</title>
+</head>
+<body style="text-align:center; direction: rtl; font-family: sans-serif;">
+  <h1>مرحبًا بك في عالم الأفلام 🎬</h1>
+  <form action="/result" method="POST">
+    <label>اسمك:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>عمرك:</label><br>
+    <input type="number" name="age" required><br><br>
+
+    <button type="submit">أرسل</button>
+   <a href="{{ url_for('index') }}">الرجوع للصفحة الرئيسية</a>
+  </form>
+</body>
+</html>
